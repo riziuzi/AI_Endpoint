@@ -30,6 +30,9 @@ app.set('view engine', 'ejs');          // this engine is used to separate the p
 
 app.use(express.urlencoded( {extended: false}));        //??
 
+//static file addition
+app.use(express.static(__dirname + '/public'));
+
 
 // Express session - something to do with converting of user Object to a serialized ID(?), which will maintain throughout the session
 app.use(session({
